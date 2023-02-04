@@ -100,4 +100,11 @@
     - stdout_pretty_tests_report
     - module_generator
     - cppcheck
+
+:cppcheck:
+  :addons:
+    - misra
+  :options:
+    - --std=c99
+    - --inline-suppr
 ...
