@@ -95,7 +95,9 @@
 :plugins:
   :load_paths:
     - "#{Ceedling.load_path}"
+    - vendor/ceedling/plugins
   :enabled:
     - stdout_pretty_tests_report
     - module_generator
+    - cppcheck
 ...

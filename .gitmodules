@@ -1,0 +1,3 @@
+[submodule "vendor/ceedling/plugins/cppcheck"]
+	path = vendor/ceedling/plugins/cppcheck
+	url = https://github.com/deltalejo/cppcheck-ceedling-plugin.git
