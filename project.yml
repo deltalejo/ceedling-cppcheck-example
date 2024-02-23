@@ -102,9 +102,8 @@
     - cppcheck
 
 :cppcheck:
+  :standard: c99
+  :inline_suppressions: true
   :addons:
     - misra
-  :options:
-    - --std=c99
-    - --inline-suppr
 ...
