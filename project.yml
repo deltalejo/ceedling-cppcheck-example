@@ -12,9 +12,9 @@
   :ceedling_version: 0.32.0
 
   # optional features. If you don't need them, keep them turned off for performance
-  :use_mocks: TRUE
-  :use_test_preprocessor: TRUE
-  :use_backtrace: FALSE
+  :use_mocks: true
+  :use_test_preprocessor: true
+  :use_backtrace: :gdb
   :use_decorators: :auto #Decorate Ceedling's output text. Your options are :auto, :all, or :none
 
   # tweak the way ceedling handles automatic tasks
@@ -29,16 +29,16 @@
   :compile_threads: 8
 
   # enable release build (more details in release_build section below)
-  :release_build: FALSE
+  :release_build: false
 
 # further details to configure the way Ceedling handles test code
 :test_build:
-  :use_assembly: FALSE
+  :use_assembly: false
 
 # further details to configure the way Ceedling handles release code
 :release_build:
   :output: MyApp.out
-  :use_assembly: FALSE
+  :use_assembly: false
   :artifacts: []
 
 # Plugins are optional Ceedling features which can be enabled. Ceedling supports
@@ -113,7 +113,7 @@
   :release: []
 
   # Enable to inject name of a test as a unique compilation symbol into its respective executable build. 
-  :use_test_definition: FALSE 
+  :use_test_definition: false 
 
 # Configure additional command line flags provided to tools used in each build step
 # :flags:
@@ -245,7 +245,7 @@
     # :html_title: Test Coverage Report
     :html_medium_threshold: 75
     :html_high_threshold: 90
-    # :html_absolute_paths: TRUE
+    # :html_absolute_paths: true
     # :html_encoding: UTF-8
 
 # :module_generator:
@@ -297,6 +297,10 @@
 #      :defines: []
 
 :cppcheck:
+  :reports:
+    - text
+    - xml
+    - html
   :standard: c99
   :inline_suppressions: true
   :addons:
@@ -316,73 +320,73 @@
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 #   :test_linker: 
 #     :executable:
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 #   :test_assembler: 
 #     :executable:
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 #   :test_fixture: 
 #     :executable:
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 #   :test_includes_preprocessor: 
 #     :executable:
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 #   :test_file_preprocessor: 
 #     :executable:
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 #   :test_file_preprocessor_directives: 
 #     :executable:
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 #   :test_dependencies_generator: 
 #     :executable:
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 #   :release_compiler: 
 #     :executable:
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 #   :release_linker: 
 #     :executable:
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 #   :release_assembler: 
 #     :executable:
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 #   :release_dependencies_generator: 
 #     :executable:
 #     :arguments: []
 #     :name: 
 #     :stderr_redirect: :auto
-#     :optional: FALSE
+#     :optional: false
 # #These tools can be filled out when command_hooks plugin is enabled
 #   :pre_mock_preprocess
 #   :post_mock_preprocess
