@@ -333,6 +333,7 @@
 
 :cppcheck:
   :reports:
+    - sarif
     - text
     - xml
     - html
